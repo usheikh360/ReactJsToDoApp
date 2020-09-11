@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar{
+  background-color: purple;
+}
+
+body{
+  margin: 0;
+}
+
+.navbar{
+  height: 100px;
+  background-color: #333;
+  color: whitesmoke;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
