@@ -4,7 +4,7 @@ import './App.css';
 import Header from "./components/Header"
 import MainContent from "./components/MainContent"
 import Footer from "./components/Footer"
-
+import GreetingMessage from "./components/GreetingMessage"
 // function App() {
 //   return (
 //     <div className="App">
@@ -30,6 +30,7 @@ function App() {
   return (
     <div>
       <Header />
+      <GreetingMessage />
       <MainContent />
       <Footer />
     </div>
