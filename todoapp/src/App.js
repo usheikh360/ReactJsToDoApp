@@ -70,6 +70,7 @@ import todoData from "./todoData.js"
 //   }
 // }
 
+// state practise 1
 class App extends Component {
   constructor() {
     super()
@@ -88,5 +89,29 @@ class App extends Component {
   }
 }
 
+//state practise 2
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      loggedIn: true
+    }
+  }
+
+  render() {
+    let response;
+    if (this.state.loggedIn == true) {
+      response = "in"
+    } else {
+      response = "out"
+    }
+
+    return (
+      <div>
+        <h1> You are currently logged {response}</h1>
+      </div>
+    )
+  }
+}
 
 export default App;
