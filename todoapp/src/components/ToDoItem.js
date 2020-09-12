@@ -1,10 +1,23 @@
 import React from "react"
 
-function ToDoItem() {
+//below is the first method for adding the props
+// function ToDoItem(props) {
+//     return (
+//         <div className="todo-item">
+//             <input type="checkbox"></input>
+//             <p>{props.item}</p>
+//             {/* <p>Placeholder text here</p> */}
+//         </div>
+//     )
+// }
+
+//below is the second method for adding the props by providing an object
+function ToDoItem(props) {
     return (
-        <div>
+        <div className="todo-item">
             <input type="checkbox"></input>
-            <p>Placeholder text here</p>
+            <p>{props.itemName.item}</p>
+            {/* <p>Placeholder text here</p> */}
         </div>
     )
 }
