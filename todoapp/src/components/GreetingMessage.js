@@ -1,4 +1,5 @@
-import React from "react"
+// import React from "react"
+import React, { Component } from "react"
 import { createPortal } from "react-dom";
 
 function GreetingMessage() {
@@ -39,4 +40,52 @@ function GreetingMessage() {
     )
 }
 
+// class GreetingMessage extends React.Component() {
+//     render() {
+//         const date = new Date();
+//         const hours = date.getHours();
+//         let message;
+//         if (hours < 12) {
+//             message = "morning";
+//         } else if (hours > 12 && hours < 17) {
+//             message = "afternoon";
+//         } else {
+//             message = "night";
+//         }
+//         return (
+//             <p>Good {message}!</p>
+//         )
+//     }
+// }
+
+// #2 CLASS
+// class Header extends React.Component {
+//     render() {
+//         return (
+//             <header>
+//                 <p>Welcome, {this.props.username}!</p>
+//             </header>
+//         )
+//     }
+// }
+
+// #3
+class Greeting extends Component {
+    render() {
+        const date = new Date()
+        const hours = date.getHours()
+        let timeOfDay
+
+        if (hours < 12) {
+            timeOfDay = "morning"
+        } else if (hours >= 12 && hours < 17) {
+            timeOfDay = "afternoon"
+        } else {
+            timeOfDay = "night"
+        }
+        return (
+            <h1>Good {timeOfDay} to you, sir or madam!</h1>
+        )
+    }
+}
 export default GreetingMessage;

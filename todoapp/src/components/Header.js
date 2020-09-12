@@ -8,13 +8,12 @@ function Header() {
 
 export default Header
 
-// function Header() {
-//     return (
-//         <header>
-//             Header
-//         </header>
-
-//     )
+// class Header extends React.Component {
+//     render() {
+//         return (
+//             <header className="navbar">This is a header</header>
+//         )
+//     }
 // }
 
 // export default Header

@@ -54,11 +54,20 @@ import todoData from "./todoData.js"
 function App() {
   const toDos = todoData.map((item) => <ToDoItem key={item.id} item={item} />)
   return (
-    <div className="todo-list">
+    <div className="todo-list" >
       {toDos}
     </div>
   )
 }
 // export default App;
-
+// class App extends React.Component {
+//   render() {
+//     return (
+//       <div>
+//         <Header />
+//         <Greeting />
+//       </div>
+//     )
+//   }
+// }
 export default App;
