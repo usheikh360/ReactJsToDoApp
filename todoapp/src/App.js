@@ -71,46 +71,66 @@ import todoData from "./todoData.js"
 // }
 
 // state practise 1
-class App extends Component {
-  constructor() {
-    super()
-    this.state = {
-      name: "Jack",
-      age: 22
-    }
-  }
-  render() {
-    return (
-      <div>
-        <h1>{this.state.name}</h1>
-        <h3>{this.state.age} years old</h3>
-      </div>
-    )
-  }
-}
+// class App extends Component {
+//   constructor() {
+//     super()
+//     this.state = {
+//       name: "Jack",
+//       age: 22
+//     }
+//   }
+//   render() {
+//     return (
+//       <div>
+//         <h1>{this.state.name}</h1>
+//         <h3>{this.state.age} years old</h3>
+//       </div>
+//     )
+//   }
+// }
 
 //state practise 2
+// class App extends React.Component {
+//   constructor() {
+//     super();
+//     this.state = {
+//       loggedIn: true
+//     }
+//   }
+
+//   render() {
+//     let response;
+//     if (this.state.loggedIn == true) {
+//       response = "in"
+//     } else {
+//       response = "out"
+//     }
+
+//     return (
+//       <div>
+//         <h1> You are currently logged {response}</h1>
+//       </div>
+//     )
+//   }
+// }
+
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      loggedIn: true
+      // todosData : []
+      todos: todoData
     }
   }
 
   render() {
-    let response;
-    if (this.state.loggedIn == true) {
-      response = "in"
-    } else {
-      response = "out"
-    }
-
+    // const todoItems = this.state.todos.map((item) => <TodoItem key = {this.state.id} item={this.state.item}/>)
+    const todoItems = this.state.todos.map(item => <ToDoItem key={item.id} item={item} />)
+    // console.log(this.state.todosData)
     return (
-      <div>
-        <h1> You are currently logged {response}</h1>
-      </div>
-    )
+      <div className="todo-list">
+        {todoItems}
+      </div>)
   }
 }
 
