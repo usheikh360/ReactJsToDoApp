@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Header from "./components/Header"
@@ -51,23 +51,42 @@ import todoData from "./todoData.js"
 //   )
 // }
 
-function App() {
-  const toDos = todoData.map((item) => <ToDoItem key={item.id} item={item} />)
-  return (
-    <div className="todo-list" >
-      {toDos}
-    </div>
-  )
-}
-// export default App;
+// function App() {
+//   const toDos = todoData.map((item) => <ToDoItem key={item.id} item={item} />)
+//   return (
+//     <div className="todo-list" >
+//       {toDos}
+//     </div>
+//   )
+// }
 // class App extends React.Component {
 //   render() {
 //     return (
 //       <div>
-//         <Header />
+//         <Header username="umair" />
 //         <Greeting />
 //       </div>
 //     )
 //   }
 // }
+
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      name: "Jack",
+      age: 22
+    }
+  }
+  render() {
+    return (
+      <div>
+        <h1>{this.state.name}</h1>
+        <h3>{this.state.age} years old</h3>
+      </div>
+    )
+  }
+}
+
+
 export default App;
